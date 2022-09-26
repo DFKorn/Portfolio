@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dec1eff8f1.js" crossorigin="anonymous"></script>
+    <script src="./app.js" defer></script>
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#hero" class="nav-home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" class="nav-about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#projects" class="nav-projects" onclick="toggleMenu()">Projects</a></li>
+            </ul>
+            <div class="langSwitch">
+                <span class="en">English</span>
+                <input type="checkbox" class="check">
+                <span class="ru">Русский</span>
+            </div>
+            <div class="themeSwitch"></div>
+        </nav>
+        <main>
+            <div class="topbar">
+                <a href="#" class="logo">Portfolio</a>
+                <div class="toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <section class="hero" id="hero">
+                <div class="content">
+                    <div class="imgBox">
+                        <img src="./resources/profile.jpg" alt="profile">
+                    </div>
+                    <h1>Dmitry Kornatovskiy</h1>
+                    <p>Front-End web developer</p>
+                    <ul class="socialMedia">
+                        <li><a href="https://github.com/DFKorn"><i class="fa-brands fa-github"></i></a></li>
+                        <li><a href="https://t.me/Kornatovskiy"><i class="fa-brands fa-telegram"></i></a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="about adjust" id="about">
+                <div class="title">
+                    <h2>About Me</h2>
+                </div>
+                <div class="content">
+                    <div class="textBox">
+                        <p>Hi, my name is Dmitry Kornatovskiy. I tend to be a front-end developer. I don't have commerce experince so far but i have completed a few projects which you can see below. This site is my personal web portfolio. Here I gathered projects that show my skills.</p>
+                    </div>
+                    <div class="imgBox">
+                        <img src="./resources/Certificate.jpg" alt="Certificate">
+                    </div>
+                </div>
+            </section>
+            <section class="projects adjust" id="projects">
+                <div class="title">
+                    <h2>Recent Works</h2>
+                    <p>here gathered my latest projects</p>
+                </div>
+                <div class="content">
+                    <div class="workBox">
+                        <div class="imgBox">
+                            <img src="./resources/Nepal.jpg" alt="Nepal project">
+                        </div>
+                        <div class="textBox">
+                            <h3>Nepal Project</h3>
+                        </div>
+                    </div>
+                    <div class="workBox">
+                        <div class="imgBox">
+                            <img src="./resources/Jamming.jpg" alt="Jamming project">
+                        </div>
+                        <div class="textBox">
+                            <h3>Jamming</h3>
+                        </div>
+                    </div>
+                    <div class="workBox">
+                        <div class="imgBox">
+                            <img src="./resources/Adopt-a-pet.png" alt="Adopt a pet project">
+                        </div>
+                        <div class="textBox">
+                            <h3>Adopt a pet</h3>
+                        </div>
+                    </div>
+                    <div class="workBox">
+                        <div class="imgBox">
+                            <img src="./resources/react-1.svg" alt="Appointment planner">
+                        </div>
+                        <div class="textBox">
+                            <h3>Appointment planner</h3>
+                        </div>
+                    </div>
+                    <div class="workBox">
+                        <div class="imgBox redux">
+                            <img src="./resources/redux.svg" alt="Flashcards">
+                        </div>
+                        <div class="textBox">
+                            <h3>Flashcards Project</h3>
+                        </div>
+                    </div>
+                    <div class="workBox">
+                        <div class="imgBox">
+                            <img src="./resources/Nepal.jpg" alt="Nepal project">
+                        </div>
+                        <div class="textBox">
+                            <h3>Nepal Project</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="copyright">
+                <p>©Made by Dmitry Kornatovskiy</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        let toggle = document.querySelector('.toggle');
+        let topbar = document.querySelector('.topbar');
+        let navigation = document.querySelector('nav');
+        let main = document.querySelector('main');
+        let themeSwitch = document.querySelector('.themeSwitch')
+        let body = document.querySelector('body')
+        toggle.onclick = function () {
+            toggle.classList.toggle('active');
+            topbar.classList.toggle('active');
+            navigation.classList.toggle('active');
+            main.classList.toggle('active')
+        }
+
+        //Page language switch
+        const page = document.querySelector('html')
+        let langToggleButton= document.querySelector('.check')
+
+        const langSwitch = () => {
+            if(page.lang===''){
+                page.lang ='en'
+                langToggleButton.checked = false;
+            }else if (page.lang === 'en'){
+                page.lang = 'ru'
+                localStorage.setItem('lang','ru')
+            }else if (page.lang === 'ru'){
+                page.lang = 'en'
+                localStorage.setItem('lang','en')
+            }
+            contentChange(page.lang)
+        }
+        langToggleButton.addEventListener('click', langSwitch)
+
+        
+
+        const content = {
+            en:{
+                navigation:{
+                    home: 'Home',
+                    about: 'About',
+                    projects: 'Projects'
+                },
+                hero:{
+                    h1: 'Dmitry Kornatovskiy ',
+                    p: 'Front-End web developer'
+                },
+                about: {
+                    h2: 'About Me',
+                    p:"Hi, my name is Dmitry Kornatovskiy. I tend to be a front-end developer. I don't have commerce experince so far but i have completed a few projects which you can see below. This site is my personal web portfolio. Here I gathered projects that show my skills."
+                },
+                recentWorks:{
+                    h2: 'Recent Works',
+                    p: 'Here gathered my latest projects'
+                }
+            },
+            ru:{
+                navigation:{
+                    home: 'Домой',
+                    about: 'Обо мне',
+                    projects: 'Мои проекты'
+                },
+                hero:{
+                    h1: 'Дмитрий Корнатовский',
+                    p: 'Front-End web developer'
+                },
+                about: {
+                    h2: 'Обо мне',
+                    p:"Привет, меня зову Дмитрий Корнатовский. Я недавно закончил курсы обучения по напрвлению фронтенд-разработчик.Это сайт - мое портфолио. Здесь собраны проекты демонстрирющие мои навыки."
+                },
+                recentWorks:{
+                    h2: 'Мои проекты',
+                    p: 'Здесь собраны мои последние проекты'
+                }
+            }
+        }
+
+        let navHome = document.querySelector('.nav-home');
+        let navAbout = document.querySelector('.nav-about');
+        let navProjects = document.querySelector('.nav-projects');
+
+        let heroHeader = document.querySelector('.hero h1');
+        let heroPara = document.querySelector('.hero p')
+
+        let aboutHeader = document.querySelector('.about h2');
+        let aboutPara = document.querySelector('.about p');
+
+        let projectsHeader = document.querySelector('.projects h2');
+        let projectsPara = document.querySelector('.projects p')
+        
+        function contentChange(lang){
+            console.log(lang);
+            navHome.textContent = content[lang].navigation.home;
+            navAbout.textContent = content[lang].navigation.about;
+            navProjects.textContent = content[lang].navigation.projects;
+        
+            heroHeader.textContent = content[lang].hero.h1;
+            heroPara.textContent = content[lang].hero.p;
+
+            aboutHeader.textContent = content[lang].about.h2;
+            aboutPara.textContent = content[lang].about.p;
+
+            projectsHeader.textContent = content[lang].recentWorks.h2;
+            projectsPara.textContent = content[lang].recentWorks.p
+        }
+
+        //change language depending on user's location 
+        //using OpenWeather API for geocoding
+        const weatherKey = 'a5896f288c42d0b5b853f3f61debe275'
+        function getPosition(){
+            if('geolocation' in navigator){
+                navigator.geolocation.getCurrentPosition((position) =>{
+                    let lat = position.coords.latitude;
+                    let lon = position.coords.longitude;
+
+                    const getCountry = fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${weatherKey}`);
+                    getCountry.then((response) =>{
+                    const jsonPromise = response.json();
+                    jsonPromise.then((data) => {
+                        console.log(data)
+                        const country = data[0].country;
+                        console.log(country);
+                        if(country === 'RU' || country === 'BY'){
+                            page.lang = 'ru';
+                            contentChange(page.lang)
+                            langToggleButton.checked = true;
+                            localStorage.setItem('lang','ru')
+                        }else{
+                            page.lang = 'en';
+                            contentChange(page.lang);
+                            langToggleButton.checked = false;
+                            localStorage.setItem('lang', 'en')
+                        }
+                        })
+                    })
+                },
+                function (error) {
+                    if (error.code == error.PERMISSION_DENIED){
+                        console.log(error)
+                        page.lang = 'en';
+                        contentChange(page.lang);
+                        langToggleButton.checked = false;
+                        localStorage.setItem('lang', 'en') 
+                    }
+                })
+            } else {
+                page.lang = 'en';
+                contentChange(page.lang);
+                langToggleButton.checked = false;
+                localStorage.setItem('lang', 'en')
+            }
+        }
+        //check for user's language and theme preferences
+        function checkLocalStorage (){
+                if(localStorage.getItem('lang')){
+                    const lang = localStorage.getItem('lang')
+                    lang === 'ru'? langToggleButton.checked = true : langToggleButton.checked = false
+                    page.lang = lang;
+                    contentChange(lang)
+                }else{
+                    getPosition()
+                };
+                if(localStorage.getItem('theme')){
+                    const theme = localStorage.getItem('theme');
+                    body.classList.add(theme)
+                }
+        }
+
+        checkLocalStorage()
+        
+        //Drk/light mode switch
+        themeSwitch.onclick = function(){
+            body.classList.toggle('dark');
+            body.classList.contains('dark') 
+            ? localStorage.setItem('theme', 'dark') 
+            : localStorage.setItem('theme', '');
+        }
+
+        //Navigation menu
+        function toggleMenu(){
+            let navigation = document.querySelector('nav');
+            let main = document.querySelector('main');
+            let topbar = document.querySelector('.topbar');
+            navigation.classList.remove('active');
+            main.classList.remove('active');
+            topbar.classList.remove('active')
+        }
+
+    </script>
+</body>
+</html>
