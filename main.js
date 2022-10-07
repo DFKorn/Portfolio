@@ -91,7 +91,7 @@ let projectsPara = document.querySelector('.projects p')
 
 function contentChange(lang){
     console.log(lang);
-    navHome.textContent = content[lang].navigation.hero;
+    navHome.textContent = content[lang].navigation.home;
     navAbout.textContent = content[lang].navigation.about;
     navProjects.textContent = content[lang].navigation.projects;
 
