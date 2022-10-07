@@ -114,7 +114,7 @@ function getPosition(){
             let lat = position.coords.latitude;
             let lon = position.coords.longitude;
 
-            const getCountry = fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${weatherKey}`);
+            const getCountry = fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${weatherKey}`);
             getCountry.then((response) =>{
             const jsonPromise = response.json();
             jsonPromise.then((data) => {
