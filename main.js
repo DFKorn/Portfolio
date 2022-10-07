@@ -137,9 +137,9 @@ themeSwitch.onclick = function(){
 
 //Navigation menu
 
-navigation.onclick = toggleMenu;
-main.onclick = toggleMenu;
-topbar.onclick = toggleMenu;
+navHome.onclick = toggleMenu;
+navAbout.onclick = toggleMenu;
+navProjects.onclick = toggleMenu;
 
 
 
