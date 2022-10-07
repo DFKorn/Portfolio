@@ -72,7 +72,7 @@ nav ul li a {
     display: block;
     width: 100%;
     margin: 10px 0;
-    white-space: normal;
+    white-space: nowrap;
     display: flex;
     text-transform: uppercase;
     text-decoration: none;
@@ -366,12 +366,11 @@ p{
     padding: 20px 40px;
     left: 0;
     color: #555;
-    /* background-color: var(--dark); */
 }
 
 .check{
     position: relative;
-    width: 50px;
+    min-width: 50px;
     margin: 0 5px;
 }
 
@@ -412,7 +411,6 @@ p{
 }
 
 .ru{
-    /* color:var(--dark); */
     color:var(--blue);
     opacity: 0.8;
 }
