@@ -141,17 +141,6 @@ navHome.onclick = toggleMenu;
 navAbout.onclick = toggleMenu;
 navProjects.onclick = toggleMenu;
 
-
-
-// function toggleMenu(){
-//     let navigation = document.querySelector('nav');
-//     let main = document.querySelector('main');
-//     let topbar = document.querySelector('.topbar');
-//     navigation.classList.remove('active');
-//     main.classList.remove('active');
-//     topbar.classList.remove('active')
-// }
-
 function toggleMenu(){
     navigation.classList.remove('active');
     main.classList.remove('active');
