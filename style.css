@@ -328,6 +328,7 @@ p{
     height: 100%;
     background-color: var(--dark);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transform: translateY(100%);
@@ -342,10 +343,20 @@ p{
     transform: translateY(0);
 }
 
-.projects .content .workBox .textBox h3{
+.projects .content .workBox .textBox > h3, h4, p{
     color: #fff;
-    font-size: 1em;
 }
+
+.projects .content .workBox .textBox > h3 {
+    margin-bottom: 20px;
+}
+
+.projects .content .workBox .textBox > p{
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
 .redux{
     background-color: #222222;
 }
@@ -550,5 +561,11 @@ p{
 
     .copyright{
         padding: 10px 20px;
+    }
+}
+
+@media (hover: none){
+    .desktop-link{
+        pointer-events: none;
     }
 }
