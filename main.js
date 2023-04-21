@@ -73,25 +73,33 @@ function getPosition(){
             let lon = position.coords.longitude;
 
             const getCountry = fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${weatherKey}`);
-            getCountry.then((response) =>{
-            const jsonPromise = response.json();
-            jsonPromise.then((data) => {
-                console.log(data)
-                const country = data[0].country;
-                console.log(country);
-                if(country === 'RU' || country === 'BY'){
-                    page.lang = 'ru';
-                    contentChange(page.lang)
-                    langToggleButton.checked = true;
-                    localStorage.setItem('lang','ru')
-                }else{
-                    page.lang = 'en';
-                    contentChange(page.lang);
-                    langToggleButton.checked = false;
-                    localStorage.setItem('lang', 'en')
-                }
+
+            getCountry
+                .then((response) =>{
+                    if(!response.ok){
+                        throw new Error (`HTTP error: ${response.status}`)
+                    }
+                    return response.json();
                 })
-            })
+                .then((data) => {
+                    console.log(data)
+                    const country = data[0].country;
+                    console.log(country);
+                    if(country === 'RU' || country === 'BY'){
+                        page.lang = 'ru';
+                        contentChange(page.lang)
+                        langToggleButton.checked = true;
+                        localStorage.setItem('lang','ru')
+                    }else{
+                        page.lang = 'en';
+                        contentChange(page.lang);
+                        langToggleButton.checked = false;
+                        localStorage.setItem('lang', 'en')
+                    }
+                })
+                .catch((error) => {
+                    console.error(`Could not get the location: ${error}`);
+                  });
         },
         function (error) {
             if (error.code == error.PERMISSION_DENIED){
@@ -127,7 +135,7 @@ function checkLocalStorage (){
 
 checkLocalStorage()
 
-//Drk/light mode switch
+//Dark/light mode switch
 themeSwitch.onclick = function(){
     body.classList.toggle('dark');
     body.classList.contains('dark') 
