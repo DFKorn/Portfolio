@@ -197,6 +197,7 @@ p{
 
 .dark p {
     color: var(--dark);
+    opacity: 0.8;
 }
 
 .socialMedia{
@@ -282,6 +283,10 @@ p{
 }
 .about .content .imgBox img{
     max-width: 100%;
+}
+
+.projects .title p {
+    opacity: 0.6;
 }
 
 .projects .content{
