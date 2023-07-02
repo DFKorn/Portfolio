@@ -42,7 +42,9 @@ let heroHeader = document.querySelector('.hero h1');
 let heroPara = document.querySelector('.hero p')
 
 let aboutHeader = document.querySelector('.about h2');
-let aboutPara = document.querySelector('.about p');
+let aboutPara1 = document.querySelector('.about__par1');
+let aboutPara2 = document.querySelector('.about__par2');
+let skillsHeader = document.querySelector('.skills h3');
 
 let projectsHeader = document.querySelector('.projects h2');
 let projectsPara = document.querySelector('.projects p')
@@ -57,7 +59,10 @@ function contentChange(lang){
     heroPara.textContent = content[lang].hero.p;
 
     aboutHeader.textContent = content[lang].about.h2;
-    aboutPara.textContent = content[lang].about.p;
+    aboutPara1.textContent = content[lang].about.p;
+    aboutPara2.textContent = content[lang].about.p2;
+    skillsHeader.textContent = content[lang].about.skills;
+
 
     projectsHeader.textContent = content[lang].recentWorks.h2;
     projectsPara.textContent = content[lang].recentWorks.p

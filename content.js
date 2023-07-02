@@ -11,30 +11,36 @@ const content = {
         },
         about: {
             h2: 'About Me',
-            p:"Hi, my name is Dmitry Kornatovskiy. I tend to be a front-end developer. I don't have commerce experince so far but i have completed a few projects which you can see below. This site is my personal web portfolio. Here I gathered projects that show my skills."
+            p:"Hello, my name is Dmitry Kornatovskiy. I'm a self-taught passionate front-end developer. I'm interested in building fast, functional and responsive websites. I constantly seeking to improve my skills and recently completed \"Front-End Engineer\" course on Codecademy.",
+            p2:"I'm currently open to Job opportunities where I can contribute to your business and make your users happy. Contact me if you're interested in having a taste of my skills.",
+            skills:'Skills and Technologies',
+            
         },
         recentWorks:{
             h2: 'Recent Works',
-            p: 'Here gathered my latest projects'
+            p: 'These are some of the projects I built to practice and get better at the technologies mentioned above'
         }
     },
     ru:{
         navigation:{
             home: 'Домой',
             about: 'Обо мне',
-            projects: 'Мои проекты'
+            projects: 'Мои работы'
         },
         hero:{
             h1: 'Дмитрий Корнатовский',
-            p: 'Front-End web developer'
+            p: 'Фронтенд-разработчик'
         },
         about: {
             h2: 'Обо мне',
-            p:"Привет, меня зову Дмитрий Корнатовский. Я недавно закончил курсы обучения по напрвлению фронтенд-разработчик.Это сайт - мое портфолио. Здесь собраны проекты демонстрирющие мои навыки."
+            p:"Здравствуйте, меня зовут Дмитрий Корнатовский. Я начинающий фронтенд-разработчик. Мне нравится создавать быстрые, функциональные и адаптивные интерфейсы. Я постоянно стремлюсь улучшать свои навыки и недавно окончил курс «Front-End Engineer» на Codecademy.",
+            p2:"Я открыт для предложений о работе и буду рад помочь вашему бизнесу в достижении поставленных целей.",
+            skills:'Навыки и технологии',
+
         },
         recentWorks:{
-            h2: 'Мои проекты',
-            p: 'Здесь собраны мои последние проекты'
+            h2: 'Мои работы',
+            p: 'Здесь представлены проекты, работая над которыми я практиковался и совершенствовался в технологиях указанных выше'
         }
     }
 }

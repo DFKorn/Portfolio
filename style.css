@@ -24,6 +24,7 @@
 
 body{
     overflow-x: hidden;
+    background-color: var(--white);
 }
 
 .container{
@@ -276,6 +277,31 @@ p{
 .about .content .textBox{
     width: 49%;
     max-width: 49%;
+    min-width: 45%;
+}
+
+
+.about .textBox p{
+    margin-bottom: 16px;
+}
+
+.about .textBox .technologies{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-flow: row wrap;
+    margin-top: 1rem;
+}
+
+.about .technologies .tech{
+    background-color: #7293ac21;
+    width: max-content;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.6rem 1rem 0.8rem;
+    border-radius: 10px;
+    font-size: 1rem;
 }
 
 .about .content .imgBox{
@@ -283,10 +309,6 @@ p{
 }
 .about .content .imgBox img{
     max-width: 100%;
-}
-
-.projects .title p {
-    opacity: 0.6;
 }
 
 .projects .content{

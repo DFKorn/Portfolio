@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,6 +43,7 @@
                     <h1>Dmitry Kornatovskiy</h1>
                     <p>Front-End web developer</p>
                     <ul class="socialMedia">
+                        <li><a href="mailto:kornatovskiydf@mail.ru"><i class="fa-regular fa-envelope"></i></a></li>
                         <li><a href="https://github.com/DFKorn"><i class="fa-brands fa-github"></i></a></li>
                         <li><a href="https://t.me/Kornatovskiy"><i class="fa-brands fa-telegram"></i></a></li>
                     </ul>
@@ -52,7 +55,21 @@
                 </div>
                 <div class="content">
                     <div class="textBox">
-                        <p>Hi, my name is Dmitry Kornatovskiy. I tend to be a front-end developer. I don't have commerce experince so far but i have completed a few projects which you can see below. This site is my personal web portfolio. Here I gathered projects that show my skills.</p>
+                        <p class="about__par1">Hello, my name is Dmitry Kornatovskiy. I'm a self-taught passionate front-end developer. I'm interested in building fast, functional and responsive websites. I constantly seeking to improve my skills and recently completed \"Front-End Engineer\" course on Codecademy.</p>
+                        <p class="about__par2">I'm currently open to Job opportunities where I can contribute to your business and make your users happy. Contact me if you're interested in having a taste of my skills.</p>
+                        <div class="skills">
+                            <h3>Skills and Technologies</h3>
+                            <ul class="technologies">
+                                <li class="tech">JavaScript</li>
+                                <li class="tech">HTML</li>
+                                <li class="tech">CSS</li>
+                                <li class="tech">React</li>
+                                <li class="tech">Redux</li>
+                                <li class="tech">TypeScript</li>
+                                <li class="tech">Git</li>
+                            </ul>
+                        </div>
+                        
                     </div>
                     <div class="imgBox">
                         <img src="./resources/Cert.jpg" alt="Certificate">
@@ -62,9 +79,23 @@
             <section class="projects adjust" id="projects">
                 <div class="title">
                     <h2>Recent Works</h2>
-                    <p>here gathered my latest projects</p>
+                    <p>These are some of the projects I built to practice and get better at the technologies mentioned above</p>
                 </div>
                 <div class="content">
+                    <div class="workBox">
+                        <a class="desktop-link" href="https://nepal-blog.netlify.app/">
+                            <div class="imgBox">
+                                <img src="./resources/Blog.jpg" alt="Nepal-travel blog">
+                            </div>
+                            <a class="mobile-link" href="https://nepal-blog.netlify.app/">
+                                <div class="textBox">
+                                    <h3>NepalTravel blog</h3>
+                                    <h4>Features:</h4>
+                                    <p>React | Responsive design | Third-party APIs</p>
+                                </div>
+                            </a>
+                        </a>
+                    </div>
                     <div class="workBox">
                         <a class="desktop-link" href="https://dfkorn.github.io/nepal/">
                             <div class="imgBox">
@@ -80,15 +111,15 @@
                         </a>
                     </div>
                     <div class="workBox">
-                        <a class="desktop-link" href="https://nepal-blog.netlify.app/">
-                            <div class="imgBox">
-                                <img src="./resources/Blog.jpg" alt="Nepal-travel blog">
+                        <a class="desktop-link" href="https://webtakenote.netlify.app/">
+                            <div class="imgBox redux">
+                                <img src="./resources/Notes.jpg" alt="Notes">
                             </div>
-                            <a class="mobile-link" href="https://nepal-blog.netlify.app/">
+                            <a class="mobile-link" href="https://webtakenote.netlify.app/">
                                 <div class="textBox">
-                                    <h3>NepalTravel blog</h3>
+                                    <h3>Notes</h3>
                                     <h4>Features:</h4>
-                                    <p>React | Responsive design | Third-party APIs</p>
+                                    <p>React | TypeScript | React Router v6</p>
                                 </div>
                             </a>
                         </a>
