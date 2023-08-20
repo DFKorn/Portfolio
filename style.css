@@ -409,13 +409,32 @@ p{
     color: #555;
 }
 
-.check{
+.langSwitch__switcher{
     position: relative;
     min-width: 50px;
     margin: 0 5px;
 }
 
-.check::before{
+.check{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  background: none;
+}
+
+.slider::before{
     content: '';
     position: absolute;
     width: 50px;
@@ -424,11 +443,11 @@ p{
     border-radius: 25px;
 }
 
-.check:checked::before{
+.check:checked + .slider::before{
     background-color: #00a1ff;
 }
 
-.check::after{
+.slider::after{
     content: '';
     position: absolute;
     left: 0px;
@@ -441,7 +460,8 @@ p{
     box-sizing: border-box;
 }
 
-.check:checked::after{
+
+.check:checked + .slider::after{
     left: 25px;
     border: 2px solid #00a1ff;
 }
